@@ -54,6 +54,7 @@ export class TestComponent implements OnInit {
     },
   ];
   number = 3;
+  disneyCharacter = 'pippo';
   onClick() {
     console.log('I clicked');
   }

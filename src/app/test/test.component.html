@@ -116,11 +116,20 @@
 </div>
 <br />
 <br />
-<!--ngSwitch directive example-->
+<!--ngSwitch directive example using a variable with a number type-->
 <div [ngSwitch]="number">
   <p *ngSwitchCase="1">One</p>
   <p *ngSwitchCase="2">Two</p>
   <p *ngSwitchCase="3">Three</p>
   <p *ngSwitchCase="4">Four</p>
+  <p *ngSwitchDefault>Default</p>
+</div>
+<br />
+<!--ngSwitch directive example using a variable with a string type-->
+<div [ngSwitch]="disneyCharacter">
+  <p *ngSwitchCase="'Mickey Mouse'">Mickey Mouse</p>
+  <p *ngSwitchCase="'pippo'">Pippo</p>
+  <p *ngSwitchCase="'Donald Duck'">Donald Duck</p>
+  <p *ngSwitchCase="'Daisy duck'">Daisy Duck</p>
   <p *ngSwitchDefault>Default</p>
 </div>
