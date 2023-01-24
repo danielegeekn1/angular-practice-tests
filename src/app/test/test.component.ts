@@ -27,8 +27,8 @@ export class TestComponent implements OnInit {
   onClick() {
     console.log('I clicked');
   }
-  onInput(e: any) {
-    console.log(e);
+  onInput(e: Event) {
+    console.log((<HTMLInputElement>e.target).value);
   }
   ngOnInit(): void {
     console.log('ngOnInit');
