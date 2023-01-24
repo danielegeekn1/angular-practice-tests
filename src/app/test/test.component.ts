@@ -30,22 +30,27 @@ export class TestComponent implements OnInit {
     {
       title: 'One piece',
       author: 'Eichiro Oda',
+      isOnline: true,
     },
     {
-      title: 'Vagabond',
+      title: 'Rouruni Kenshin',
       author: 'Nobuhiro Watsuki',
+      isOnline: true,
     },
     {
       title: 'Arms',
       author: 'Ryoji Minagawa',
+      isOnline: true,
     },
     {
       title: 'Demon Slayer',
       author: 'Koyoharu Gotōge',
+      isOnline: false,
     },
     {
       title: 'Alice in Borderland',
       author: 'Haro Aso',
+      isOnline: false,
     },
   ];
   onClick() {

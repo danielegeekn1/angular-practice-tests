@@ -89,6 +89,8 @@
 </ng-template>
 <br />
 <!--ngFor directive ex-->
-<ul>
-  <li *ngFor="let comic of comics">{{ comic.title }} - {{ comic.author }}</li>
-</ul>
+<div *ngFor="let comic of comics">
+  <p class="greenCircle" *ngIf="comic.isOnline"></p>
+  <p class="redCircle" *ngIf="!comic.isOnline"></p>
+  <p>{{ comic.title }} - {{ comic.author }}</p>
+</div>
