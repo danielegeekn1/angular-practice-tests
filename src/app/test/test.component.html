@@ -70,8 +70,20 @@
 <!--ngIf structural directive example-->
 <p *ngIf="isVisible">visible</p>
 <p *ngIf="!isVisible">not visible</p>
+<br />
+<br />
 <!--if and else condition with ngIf using a template variable-->
 <p *ngIf="isVisible; else elseBlock">I am visible</p>
 <ng-template #elseBlock>
   <p>I am not visible</p>
+</ng-template>
+<br />
+<br />
+<!--if and else condition with ngIf using a template variables, and then-->
+<ng-template *ngIf="isVisible; then ifBlock; else elseBlock2"> </ng-template>
+<ng-template #ifBlock>
+  <p>First condition</p>
+</ng-template>
+<ng-template #elseBlock2>
+  <p>Second condition</p>
 </ng-template>
