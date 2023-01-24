@@ -114,3 +114,13 @@
   </p>
   <p class="greenCircle" *ngIf="i > 2"></p>
 </div>
+<br />
+<br />
+<!--ngSwitch directive example-->
+<div [ngSwitch]="number">
+  <p *ngSwitchCase="1">One</p>
+  <p *ngSwitchCase="2">Two</p>
+  <p *ngSwitchCase="3">Three</p>
+  <p *ngSwitchCase="4">Four</p>
+  <p *ngSwitchDefault>Default</p>
+</div>

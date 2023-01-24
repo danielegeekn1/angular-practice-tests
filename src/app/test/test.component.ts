@@ -53,6 +53,7 @@ export class TestComponent implements OnInit {
       isOnline: false,
     },
   ];
+  number = 3;
   onClick() {
     console.log('I clicked');
   }
