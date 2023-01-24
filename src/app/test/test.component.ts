@@ -9,6 +9,7 @@ export class TestComponent implements OnInit {
   constructor() {
     console.log('constructor');
   }
+  title = 'best practice tutorial ever';
   isDisabled = false;
   dogs = [
     {
@@ -28,7 +29,11 @@ export class TestComponent implements OnInit {
     console.log('I clicked');
   }
   onInput(e: Event) {
+    this.title = (<HTMLInputElement>e.target).value;
     console.log((<HTMLInputElement>e.target).value);
+  }
+  onClick2(e: Event) {
+    this.title = ' I clicked on the button';
   }
   ngOnInit(): void {
     console.log('ngOnInit');

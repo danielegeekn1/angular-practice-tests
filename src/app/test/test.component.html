@@ -41,10 +41,11 @@
   </mat-card-actions>
 </mat-card>
 <!--event binding in angular-->
-<button mat-raised-button color="primary" (click)="onClick()">Primary</button>
+
 <br />
 <br />
-<!--event binding in angular / ex 2-->
+<!--event binding in angular / ex 2 / passing an event property with event binding-->
+<p>{{ title }}</p>
 <mat-form-field class="example-full-width" appearance="fill">
   <mat-label>Favorite food</mat-label>
   <input
@@ -54,3 +55,12 @@
     (input)="onInput($event)"
   />
 </mat-form-field>
+<br />
+<br />
+<button mat-raised-button color="primary" (click)="onClick2($event)">
+  Primary
+</button>
+<br />
+<br />
+<!--2 way binding in Angular-->
+<input matInput placeholder="pizza" [(ngModel)]="title" />
