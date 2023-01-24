@@ -19,10 +19,21 @@ export class TestComponent implements OnInit {
       mountainous terrain, the Shiba Inu was originally bred for hunting.`,
     },
   ];
+  img = '';
+  img1 =
+    'https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds-wallpapers_181624-9331.jpg?w=2000';
+  img2 =
+    'https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547__340.jpg';
   ngOnInit(): void {
     console.log('ngOnInit');
+    let counter = 0;
     setInterval(() => {
-      this.isDisabled = !this.isDisabled;
+      if (counter % 2 == 0) {
+        this.img = this.img1;
+      } else {
+        this.img = this.img2;
+      }
+      counter++;
     }, 2000);
   }
 }
