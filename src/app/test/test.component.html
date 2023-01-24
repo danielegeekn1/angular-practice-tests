@@ -68,4 +68,10 @@
 <br />
 <!--directives-->
 <!--ngIf structural directive example-->
-<p *ngIf="isVisible">paragraph added only if ngIf condition is followed</p>
+<p *ngIf="isVisible">visible</p>
+<p *ngIf="!isVisible">not visible</p>
+<!--if and else condition with ngIf using a template variable-->
+<p *ngIf="isVisible; else elseBlock">I am visible</p>
+<ng-template #elseBlock>
+  <p>I am not visible</p>
+</ng-template>
