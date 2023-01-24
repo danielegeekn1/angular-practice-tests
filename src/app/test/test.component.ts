@@ -27,6 +27,9 @@ export class TestComponent implements OnInit {
   onClick() {
     console.log('I clicked');
   }
+  onInput(e: any) {
+    console.log(e);
+  }
   ngOnInit(): void {
     console.log('ngOnInit');
     let counter = 0;

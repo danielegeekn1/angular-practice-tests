@@ -42,3 +42,15 @@
 </mat-card>
 <!--event binding in angular-->
 <button mat-raised-button color="primary" (click)="onClick()">Primary</button>
+<br />
+<br />
+<!--event binding in angular / ex 2-->
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Favorite food</mat-label>
+  <input
+    matInput
+    placeholder="Ex. Pizza"
+    value="Sushi"
+    (input)="onInput($event)"
+  />
+</mat-form-field>
