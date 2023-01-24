@@ -1,4 +1,5 @@
 <!-- <p>test works!</p> -->
+<!--string interpolation-->
 <mat-card class="example-card">
   <mat-card-header>
     <mat-card-title>{{ dogs[0].name.toUpperCase() }}</mat-card-title>
@@ -13,3 +14,8 @@
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>
+<!--property binding-->
+
+<button mat-raised-button color="primary" [disabled]="isDisabled">
+  Primary
+</button>
