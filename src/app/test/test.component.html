@@ -87,3 +87,8 @@
 <ng-template #elseBlock2>
   <p>Second condition</p>
 </ng-template>
+<br />
+<!--ngFor directive ex-->
+<ul>
+  <li *ngFor="let comic of comics">{{ comic.title }} - {{ comic.author }}</li>
+</ul>

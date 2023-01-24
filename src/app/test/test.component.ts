@@ -26,6 +26,28 @@ export class TestComponent implements OnInit {
   img2 =
     'https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547__340.jpg';
   isVisible = true;
+  comics = [
+    {
+      title: 'One piece',
+      author: 'Eichiro Oda',
+    },
+    {
+      title: 'Vagabond',
+      author: 'Nobuhiro Watsuki',
+    },
+    {
+      title: 'Arms',
+      author: 'Ryoji Minagawa',
+    },
+    {
+      title: 'Demon Slayer',
+      author: 'Koyoharu Gotōge',
+    },
+    {
+      title: 'Alice in Borderland',
+      author: 'Haro Aso',
+    },
+  ];
   onClick() {
     console.log('I clicked');
   }
