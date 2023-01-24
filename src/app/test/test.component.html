@@ -1,12 +1,12 @@
 <!-- <p>test works!</p> -->
 <mat-card class="example-card">
   <mat-card-header>
-    <mat-card-title>{{ dogs[0].name }}</mat-card-title>
+    <mat-card-title>{{ dogs[0].name.toUpperCase() }}</mat-card-title>
     <mat-card-subtitle>{{ dogs[0].breed }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     <p>{{ dogs[0].description }}</p>
-    <p></p>
+    <p>{{ 2 < 5 ? "Dog king" : "Dog queen" }}</p>
   </mat-card-content>
   <mat-card-actions>
     <button mat-button>LIKE</button>
