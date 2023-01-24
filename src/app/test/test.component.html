@@ -94,3 +94,23 @@
   <p class="redCircle" *ngIf="!comic.isOnline"></p>
   <p>{{ comic.title }} - {{ comic.author }}</p>
 </div>
+<br />
+<br />
+<!--ngFor condition with index, and other property we can use-->
+<div
+  *ngFor="
+    let comic of comics;
+    index as i;
+    count as c;
+    first as isFirst;
+    last as isLast;
+    even as isEven;
+    odd as isOdd
+  "
+>
+  <p>
+    First {{ isFirst }} -- Last {{ isLast }} -- {{ i }} -- {{ comic.author }} --
+    {{ comic.title }} -- Even {{ isEven }} Odd {{ isOdd }}
+  </p>
+  <p class="greenCircle" *ngIf="i > 2"></p>
+</div>
