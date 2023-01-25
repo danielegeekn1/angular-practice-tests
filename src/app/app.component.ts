@@ -33,4 +33,32 @@ export class AppComponent {
       color: 'red',
     },
   ];
+  onClickAgain(): void {
+    this.singers = [
+      {
+        name: 'David Gilmour',
+        age: 76,
+        isOnline: true,
+        color: 'green',
+      },
+      {
+        name: 'Adriano Celentano',
+        age: 85,
+        isOnline: true,
+        color: 'green',
+      },
+      {
+        name: 'Miyavi',
+        age: 41,
+        isOnline: false,
+        color: 'red',
+      },
+      {
+        name: 'Paul MacCartney',
+        age: 80,
+        isOnline: false,
+        color: 'red',
+      },
+    ];
+  }
 }
