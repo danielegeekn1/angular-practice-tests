@@ -150,7 +150,10 @@
   <li *ngFor="let book of books; index as i">
     <div
       class="circle"
-      [ngClass]="{ onlineCircle: book.isOnline, offlineCircle: !book.isOnline }"
+      [ngClass]="{
+        'onlineCircle test': book.isOnline,
+        offlineCircle: !book.isOnline
+      }"
     >
       i
     </div>
