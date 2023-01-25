@@ -133,3 +133,13 @@
   <p *ngSwitchCase="'Daisy duck'">Daisy Duck</p>
   <p *ngSwitchDefault>Default</p>
 </div>
+<!--ngStyle directive example-->
+<ul>
+  <li *ngFor="let comic of comics">
+    <div
+      class="circle"
+      [ngStyle]="{ background: comic.isOnline ? 'green' : 'red' }"
+    ></div>
+    <p>{{ comic.title }} - {{ comic.author }}</p>
+  </li>
+</ul>
