@@ -1,8 +1,11 @@
 <p>test2 works!</p>
 
-<!--passing data we get from our parent view (app.component.ts) to this child component-->
+<!--retrieving data we get from our parent view (app.component.ts)
+ //and we passed to this child component-->
 <div *ngFor="let singer of data">
   <p [ngStyle]="{ color: singer.color }">
     {{ singer.name }} - age: {{ singer.age }}
   </p>
 </div>
+<!--passing data from this child component to its parent component-->
+<button (click)="sendData()">send data to parent</button>

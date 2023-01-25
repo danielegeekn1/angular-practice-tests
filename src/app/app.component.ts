@@ -61,4 +61,7 @@ export class AppComponent {
       },
     ];
   }
+  onReceivedData(value: string) {
+    console.log(value);
+  }
 }

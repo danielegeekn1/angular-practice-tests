@@ -1,4 +1,9 @@
 <!--launching our test component from app-test-->
 <app-test></app-test>
+<!--passing the data we get from our parent component (singers)
+//to test2component (app-test-2)-->
 <app-test2 [data]="singers"></app-test2>
+<br />
 <button (click)="onClickAgain()">change singers</button>
+<!--passing data we get from our child component (app-test2) to a parent component-->
+<app-test2 (sendDataEvent)="onReceivedData($event)"></app-test2>
