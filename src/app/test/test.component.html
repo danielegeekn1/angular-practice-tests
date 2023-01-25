@@ -143,3 +143,17 @@
     <p>{{ comic.title }} - {{ comic.author }}</p>
   </li>
 </ul>
+<br />
+<br />
+<!--ngClass directive example-->
+<ul>
+  <li *ngFor="let book of books; index as i">
+    <div
+      class="circle"
+      [ngClass]="{ onlineCircle: book.isOnline, offlineCircle: !book.isOnline }"
+    >
+      i
+    </div>
+    <p>{{ book.title }} -- {{ book.author }}</p>
+  </li>
+</ul>

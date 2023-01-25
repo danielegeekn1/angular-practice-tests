@@ -53,6 +53,28 @@ export class TestComponent implements OnInit {
       isOnline: false,
     },
   ];
+  books = [
+    {
+      title: 'Lord of the rings',
+      author: 'J.R.R. Talkien',
+      isOnline: true,
+    },
+    {
+      title: 'Jurassic Park',
+      author: 'Wilbur Smith',
+      isOnline: true,
+    },
+    {
+      title: 'Alice in wonderland',
+      author: 'Louis Carrol',
+      isOnline: false,
+    },
+    {
+      title: 'Pinocchio',
+      author: 'Carlo Collodi',
+      isOnline: false,
+    },
+  ];
   number = 3;
   disneyCharacter = 'pippo';
   onClick() {
