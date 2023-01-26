@@ -9,6 +9,7 @@ import { TestService } from 'src/app/services/test.service';
 })
 export class ContactComponent implements OnInit {
   guests: any;
+  guest: any;
   isProfile: boolean;
   constructor(
     private renderGuests: TestService,
@@ -16,9 +17,18 @@ export class ContactComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.guests = this.renderGuests.renderGuests();
-    this.isProfile = !this.route.snapshot.paramMap.get('id') ? false : true;
-    console.log(this.route.snapshot.paramMap.get('id'));
-    console.log(this.isProfile);
+    // this.guests = this.renderGuests.renderGuests();
+    // this.isProfile = !this.route.snapshot.paramMap.get('id') ? false : true;
+    if (this.route.snapshot.paramMap.get('id')) {
+      this.isProfile = true;
+      this.guest = this.renderGuests.renderGuestsByI(
+        parseInt(this.route.snapshot.paramMap.get('id')!)
+      );
+      console.log('guests', this.guests);
+      console.log('guests id', this.route.snapshot.paramMap.get('id'));
+    } else {
+      this.isProfile = false;
+      this.guests = this.renderGuests.renderGuests();
+    }
   }
 }
