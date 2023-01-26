@@ -7,3 +7,5 @@
 <button (click)="onClickAgain()">change singers</button>
 <!--passing data we get from our child component (app-test2) to a parent component-->
 <app-test2 (sendDataEvent)="onReceivedData($event)"></app-test2>
+<!--passing data we get from our child component (app-test3) to a parent component-->
+<app-test3 (sendData3)="onTest3DataReceived($event)"></app-test3>

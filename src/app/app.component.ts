@@ -64,4 +64,7 @@ export class AppComponent {
   onReceivedData(value: string) {
     console.log(value);
   }
+  onTest3DataReceived(value: { title: string; author: string }[]) {
+    console.log(value);
+  }
 }

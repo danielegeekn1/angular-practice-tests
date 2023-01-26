@@ -10,8 +10,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { Test2Component } from './test2/test2.component';
+import { Test3Component } from './test3/test3.component';
 @NgModule({
-  declarations: [AppComponent, TestComponent, Test2Component],
+  declarations: [AppComponent, TestComponent, Test2Component, Test3Component],
   imports: [
     BrowserModule,
     AppRoutingModule,
