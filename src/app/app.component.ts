@@ -14,6 +14,7 @@ import {
 export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('greetingsInput') inputValue!: ElementRef<HTMLInputElement>;
   title = 'Angular-from-scratch';
+  color = 'purple';
   singers = [
     {
       name: 'Jon Bon Jovi',
