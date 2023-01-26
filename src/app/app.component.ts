@@ -12,7 +12,7 @@ import {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  @ViewChild('greetingsInput') inputValue!: ElementRef;
+  @ViewChild('greetingsInput') inputValue!: ElementRef<HTMLInputElement>;
   title = 'Angular-from-scratch';
   singers = [
     {
@@ -83,6 +83,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     console.log(value);
   }
   onClickPlus() {
-    console.log(this.inputValue);
+    console.log(this.inputValue.nativeElement.value);
   }
 }
