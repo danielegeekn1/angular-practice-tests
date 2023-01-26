@@ -33,6 +33,15 @@
     (click)="changeHiglighterColor('Violet')"
   />Violet
 </div>
+<!--adding a second default property in our directive-->
 <p [appHighlight]="color" defaultColor="blue">First paragraph</p>
 <p [appHighlight]="color" defaultColor="orange">Second paragraph</p>
 <p [appHighlight]="color" defaultColor="yellow">Third paragraph</p>
+<br />
+<!--pipes built in functions-->
+<!--uppercase-->
+<p>Hey man can you lend me {{ bookTitle | uppercase }} book</p>
+<!--datapipe examples-->
+<p>Today is {{ today | date : "medium" }}</p>
+<p>Today is {{ today | date : "shortTime" }}</p>
+<p>Today is {{ today | date : "h:mm:ss" }}</p>

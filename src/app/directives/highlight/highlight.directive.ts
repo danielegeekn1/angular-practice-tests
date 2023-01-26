@@ -12,7 +12,7 @@ export class HighlightDirective {
     this.changeColor(this.appHighlight || this.defaultColor || 'purple');
   }
   @HostListener('mouseleave') onMouseLeave() {
-    this.changeColor('red');
+    this.changeColor('transparent');
   }
   changeColor(color: string) {
     this.element.nativeElement.style.backgroundColor = color;
