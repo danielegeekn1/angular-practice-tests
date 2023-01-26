@@ -13,7 +13,7 @@ export class TestService {
     },
     {
       name: 'Eichiro',
-      surname: 'Oa',
+      surname: 'Oda',
       stillInOurHotel: true,
     },
     {
