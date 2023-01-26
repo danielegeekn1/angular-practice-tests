@@ -11,8 +11,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { Test2Component } from './test2/test2.component';
 import { Test3Component } from './test3/test3.component';
+import { HighlightDirective } from './directives/highlight/highlight.directive';
 @NgModule({
-  declarations: [AppComponent, TestComponent, Test2Component, Test3Component],
+  declarations: [
+    AppComponent,
+    TestComponent,
+    Test2Component,
+    Test3Component,
+    HighlightDirective,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
