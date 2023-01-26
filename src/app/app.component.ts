@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
+  @ViewChild('greetingsInput') inputValue!: ElementRef;
   title = 'Angular-from-scratch';
   singers = [
     {
@@ -61,10 +68,21 @@ export class AppComponent {
       },
     ];
   }
+  ngOnInit(): void {
+    console.log('ngOnInit');
+    console.log(this.inputValue);
+  }
+  ngAfterViewInit(): void {
+    console.log('ngAfterViewInit');
+    console.log(this.inputValue);
+  }
   onReceivedData(value: string) {
     console.log(value);
   }
   onTest3DataReceived(value: { title: string; author: string }[]) {
     console.log(value);
+  }
+  onClickPlus() {
+    console.log(this.inputValue);
   }
 }

@@ -9,3 +9,6 @@
 <app-test2 (sendDataEvent)="onReceivedData($event)"></app-test2>
 <!--passing data we get from our child component (app-test3) to a parent component-->
 <app-test3 (sendData3)="onTest3DataReceived($event)"></app-test3>
+<br />
+<input #greetingsInput value="hello" />
+<button (click)="onClickPlus()">send greetingsInput value</button>
