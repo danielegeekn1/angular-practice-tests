@@ -24,6 +24,6 @@ export class Test3Component implements OnInit {
     this.sendData3.emit(this.games);
   }
   ngOnInit(): void {
-    console.log(this.serviceTest.guests);
+    console.log('test3 component', this.serviceTest.guests);
   }
 }

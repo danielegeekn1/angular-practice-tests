@@ -9,6 +9,6 @@ import { TestService } from '../services/test.service';
 export class Test4Component implements OnInit {
   constructor(private testService: TestService) {}
   ngOnInit(): void {
-    console.log(this.testService.guests);
+    console.log('test4 component', this.testService.guests);
   }
 }
