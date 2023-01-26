@@ -13,6 +13,9 @@ import { Test2Component } from './test2/test2.component';
 import { Test3Component } from './test3/test3.component';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { Test4Component } from './test4/test4.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { HomeComponent } from './components/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +24,9 @@ import { Test4Component } from './test4/test4.component';
     Test3Component,
     HighlightDirective,
     Test4Component,
+    AboutComponent,
+    ContactComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

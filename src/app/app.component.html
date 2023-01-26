@@ -55,3 +55,10 @@
 <p>you owe me {{ currNumber | currency : "EUR" }}</p>
 <br />
 <app-test4></app-test4>
+<br />
+<br />
+<!--setting the link to the paths we set in app-routing module file-->
+<a routerLink="/" style="margin-right: 10px">Home</a>
+<a routerLink="about" style="margin-right: 10px">About</a>
+<a routerLink="contact" style="margin-right: 10px">Contact</a>
+<router-outlet></router-outlet>
