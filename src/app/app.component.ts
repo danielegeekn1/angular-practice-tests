@@ -86,4 +86,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   onClickPlus() {
     console.log(this.inputValue.nativeElement.value);
   }
+  changeHiglighterColor(color: string) {
+    this.color = color;
+  }
 }
