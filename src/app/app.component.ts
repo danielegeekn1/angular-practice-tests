@@ -16,6 +16,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   title = 'Angular-from-scratch';
   color: string = '';
   today: number = Date.now();
+  number: number = 5.765867;
+  currNumber: number = 4;
   bookTitle: string = 'Lord of the rings';
   singers = [
     {

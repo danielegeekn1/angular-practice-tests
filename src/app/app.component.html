@@ -42,6 +42,14 @@
 <!--uppercase-->
 <p>Hey man can you lend me {{ bookTitle | uppercase }} book</p>
 <!--datapipe examples-->
+<br />
 <p>Today is {{ today | date : "medium" }}</p>
 <p>Today is {{ today | date : "shortTime" }}</p>
 <p>Today is {{ today | date : "h:mm:ss" }}</p>
+<br />
+<!--decimal and percentage pipes-->
+<p>{{ number | number : "2.1-4" }}</p>
+<p>{{ number | percent : "2.1-4" }}</p>
+<br />
+<!--currency pipe-->
+<p>you owe me {{ currNumber | currency : "EUR" }}</p>
