@@ -1,13 +1,14 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { TestService } from '../services/test.service';
 
 @Component({
   selector: 'app-test3',
   templateUrl: './test3.component.html',
   styleUrls: ['./test3.component.css'],
 })
-export class Test3Component {
+export class Test3Component implements OnInit {
   @Output() sendData3 = new EventEmitter<{ title: string; author: string }[]>();
-  constructor() {}
+  constructor(private serviceTest: TestService) {}
   games = [
     {
       title: 'Splendor',
@@ -21,5 +22,8 @@ export class Test3Component {
 
   sendDataToParent() {
     this.sendData3.emit(this.games);
+  }
+  ngOnInit(): void {
+    console.log(this.serviceTest.guests);
   }
 }
