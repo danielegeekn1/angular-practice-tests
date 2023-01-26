@@ -27,4 +27,10 @@ export class TestService {
       stillInOurHotel: false,
     },
   ];
+  renderGuests() {
+    return this.guests;
+  }
+  renderGuestsByI(i: number) {
+    return this.guests[i];
+  }
 }
