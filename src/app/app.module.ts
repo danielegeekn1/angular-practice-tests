@@ -16,6 +16,7 @@ import { Test4Component } from './test4/test4.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
+import { SingleContactComponent } from './components/single-contact/single-contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { HomeComponent } from './components/home/home.component';
     AboutComponent,
     ContactComponent,
     HomeComponent,
+    SingleContactComponent,
   ],
   imports: [
     BrowserModule,

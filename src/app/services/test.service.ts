@@ -10,21 +10,25 @@ export class TestService {
       name: 'Akira',
       surname: 'Toriyama',
       stillInOurHotel: true,
+      color: 'green',
     },
     {
       name: 'Eichiro',
       surname: 'Oda',
       stillInOurHotel: true,
+      color: 'green',
     },
     {
       name: 'Marc',
       surname: 'Crilley',
       stillInOurHotel: false,
+      color: 'red',
     },
     {
       name: 'Johnny ',
       surname: 'Depp',
       stillInOurHotel: false,
+      color: 'red',
     },
   ];
   renderGuests() {

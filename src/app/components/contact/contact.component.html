@@ -1,11 +1,12 @@
 <div *ngIf="!isProfile; else contactProfile"></div>
 <h4 style="text-transform: uppercase; margin-top: 50px">Contact list</h4>
 <div *ngFor="let guest of guests; index as i">
-  <a routerLink="{{ i }}"
+  <a routerLink="/contacts/{{ i }}"
     ><p>{{ guest.name }} - {{ guest.surname }}</p></a
   >
 </div>
 
 <ng-template #contactProfile>
   <p>Guest profile of {{ guest.name }} -- {{ guest.surname }}</p>
+  <app-single-contact [person]="guest"></app-single-contact>
 </ng-template>
