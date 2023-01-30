@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SingleContactComponent } from './components/single-contact/single-contact.component';
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   },
 
   // { path: 'contacts/:id', component: ContactComponent },
+  { path: '404', component: NotFoundComponent },
 ];
 
 @NgModule({
