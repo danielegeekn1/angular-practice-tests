@@ -1,17 +1,20 @@
 <p>home works!</p>
 <!--html form taken from angular material-->
-<mat-form-field appearance="fill">
-  <mat-label>Input</mat-label>
-  <input matInput />
-</mat-form-field>
-<mat-form-field appearance="fill">
-  <mat-label>Select</mat-label>
-  <mat-select>
-    <mat-option value="one">First option</mat-option>
-    <mat-option value="two">Second option</mat-option>
-  </mat-select>
-</mat-form-field>
-<mat-form-field appearance="fill">
-  <mat-label>Textarea</mat-label>
-  <textarea matInput></textarea>
-</mat-form-field>
+<form class="formStyle" #homeform="ngForm" (ngSubmit)="onSubmit(homeform)">
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput type="text" name="name" ngModel />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" name="email" ngModel />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Colors</mat-label>
+    <mat-select name="color">
+      <mat-option value="red">Red</mat-option>
+      <mat-option value="blue">Blue</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
