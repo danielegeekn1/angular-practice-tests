@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth/auth.guard';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
+    canActivate: [AuthGuard],
     children: [{ path: ':id', component: SingleContactComponent }],
   },
 
