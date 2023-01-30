@@ -9,6 +9,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 import { Test2Component } from './test2/test2.component';
 import { Test3Component } from './test3/test3.component';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
@@ -40,6 +42,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
     FormsModule,
   ],
   providers: [],
