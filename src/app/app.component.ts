@@ -5,6 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { interval, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
