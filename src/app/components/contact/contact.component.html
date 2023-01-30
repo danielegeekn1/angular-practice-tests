@@ -1,9 +1,14 @@
-<h4 style="text-transform: uppercase; margin-top: 50px">Contact list</h4>
-<div *ngFor="let guest of guests; index as i">
-  <a routerLink="/contact/{{ i }}"
-    ><p>{{ guest.name }} - {{ guest.surname }}</p></a
-  >
+<div>
+  <h4 style="text-transform: uppercase; margin-top: 50px">Contact list</h4>
+  <div>
+    <div *ngFor="let guest of guests; index as i">
+      <a routerLink="/contact/{{ i }}"
+        ><p>{{ guest.name }} - {{ guest.surname }}</p></a
+      >
+    </div>
+  </div>
 </div>
+
 <router-outlet></router-outlet>
 <!-- <ng-template #contactProfile>
   <p>Guest profile of {{ guest.name }} -- {{ guest.surname }}</p>

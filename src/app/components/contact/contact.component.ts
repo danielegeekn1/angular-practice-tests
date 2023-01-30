@@ -9,8 +9,6 @@ import { TestService } from 'src/app/services/test.service';
 })
 export class ContactComponent implements OnInit {
   guests: any;
-  guest: any;
-  // isProfile: boolean;
   constructor(private renderGuests: TestService) {}
 
   ngOnInit(): void {
