@@ -7,7 +7,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SingleContactComponent } from './components/single-contact/single-contact.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/homepage' },
+  { path: '', pathMatch: 'full', redirectTo: '/homepage' },
   { path: 'homepage', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   {
