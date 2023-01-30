@@ -15,6 +15,7 @@ const routes: Routes = [
     path: 'contact',
     component: ContactComponent,
     canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
     children: [{ path: ':id', component: SingleContactComponent }],
   },
 
