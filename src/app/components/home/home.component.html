@@ -1,6 +1,6 @@
 <p>home works!</p>
 <!--html form taken from angular material-->
-<form class="formStyle" #homeform="ngForm" (ngSubmit)="onSubmit(homeform)">
+<!-- <form class="formStyle" #homeform="ngForm" (ngSubmit)="onSubmit(homeform)">
   <mat-form-field appearance="fill">
     <mat-label>Name</mat-label>
     <input matInput type="text" name="name" ngModel required />
@@ -24,4 +24,24 @@
   >
     Submit
   </button>
+</form> -->
+
+<!--reactive form taken from angular material, managed in TS-->
+<form class="formStyle" [formGroup]="homeform" (ngSubmit)="onSubmitR()">
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput type="text" formControlName="name" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="surname" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Colors</mat-label>
+    <mat-select formControlName="name">
+      <mat-option value="red">Red</mat-option>
+      <mat-option value="blue">Blue</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Submit</button>
 </form>
