@@ -32,9 +32,12 @@
     <mat-label>Name</mat-label>
     <input matInput type="text" formControlName="name" />
   </mat-form-field>
+  <p *ngIf="!homeform.get('name')?.valid && homeform.get('name')?.touched">
+    Add a name
+  </p>
   <mat-form-field appearance="fill">
     <mat-label>Email</mat-label>
-    <input matInput type="email" formControlName="surname" />
+    <input matInput type="email" formControlName="email" />
   </mat-form-field>
   <mat-form-field appearance="fill">
     <mat-label>Colors</mat-label>
@@ -43,5 +46,12 @@
       <mat-option value="blue">Blue</mat-option>
     </mat-select>
   </mat-form-field>
-  <button mat-raised-button color="primary" type="submit">Submit</button>
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="!homeform.valid"
+  >
+    Submit
+  </button>
 </form>

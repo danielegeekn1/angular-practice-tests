@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +11,8 @@ export class HomeComponent implements OnInit {
   constructor() {}
   ngOnInit(): void {
     this.homeform = new FormGroup({
-      name: new FormControl('Daniele'),
-      surname: new FormControl(),
+      name: new FormControl(null, Validators.required),
+      email: new FormControl(null, [Validators.required, Validators.email]),
       color: new FormControl(),
     });
   }
