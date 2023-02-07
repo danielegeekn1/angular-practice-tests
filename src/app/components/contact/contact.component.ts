@@ -51,4 +51,15 @@ export class ContactComponent implements OnInit {
         console.log(data);
       });
   }
+  onPutClient(id: any) {
+    this.firebase
+      .putClient(
+        'https://angular-course-db71f-default-rtdb.europe-west1.firebasedatabase.app/persons',
+        id,
+        { name: 'Daniele', email: 'daniele@hotmail.com' }
+      )
+      .subscribe((data) => {
+        console.log(data);
+      });
+  }
 }

@@ -19,4 +19,7 @@ export class FirebaseService {
   patchClient(url: string, id: string, body: {}) {
     return this.http.patch(`${url}/${id}.json`, body);
   }
+  putClient(url: string, id: string, body: {}) {
+    return this.http.put(`${url}/${id}.json`, body);
+  }
 }
