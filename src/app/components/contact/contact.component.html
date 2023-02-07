@@ -3,7 +3,7 @@
   <div>
     <div *ngFor="let guest of guests; index as i">
       <a routerLink="/contact/{{ i }}"
-        ><p>{{ guest.name }} - {{ guest.surname }}</p></a
+        ><p>{{ guest.name }} - {{ guest.email }}</p></a
       >
     </div>
   </div>

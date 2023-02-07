@@ -9,4 +9,7 @@ export class FirebaseService {
   insertClient(url: string, body: {}) {
     return this.http.post(url, body);
   }
+  getClient(url: string) {
+    return this.http.get(url);
+  }
 }
