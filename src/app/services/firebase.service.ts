@@ -16,4 +16,7 @@ export class FirebaseService {
     console.log(`${url}/${id}.json`);
     return this.http.delete(`${url}/${id}.json`);
   }
+  patchClient(url: string, id: string, body: {}) {
+    return this.http.patch(`${url}/${id}.json`, body);
+  }
 }

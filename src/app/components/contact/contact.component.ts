@@ -40,4 +40,15 @@ export class ContactComponent implements OnInit {
         console.log(data);
       });
   }
+  onPatchClient(id: any) {
+    this.firebase
+      .patchClient(
+        'https://angular-course-db71f-default-rtdb.europe-west1.firebasedatabase.app/persons',
+        id,
+        { email: 'eichiro.one-piece@gmail.com' }
+      )
+      .subscribe((data) => {
+        console.log(data);
+      });
+  }
 }
