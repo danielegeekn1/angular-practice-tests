@@ -29,4 +29,15 @@ export class ContactComponent implements OnInit {
         console.log(this.guests);
       });
   }
+  onDeleteClient(id: any) {
+    this.firebase
+      .deleteClient(
+        'https://angular-course-db71f-default-rtdb.europe-west1.firebasedatabase.app/persons',
+        //'-NNfj0nrjjjhXfaIcRnk'
+        id
+      )
+      .subscribe((data) => {
+        console.log(data);
+      });
+  }
 }

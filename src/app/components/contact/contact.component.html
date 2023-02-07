@@ -5,6 +5,13 @@
       <a routerLink="/contact/{{ i }}"
         ><p>{{ guest.name }} - {{ guest.email }}</p></a
       >
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="onDeleteClient(guest.id)"
+      >
+        Delete user
+      </button>
     </div>
   </div>
 </div>
