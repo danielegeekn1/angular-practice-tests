@@ -5,11 +5,13 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { SignupComponent } from './components/signup/signup.component';
 import { SingleContactComponent } from './components/single-contact/single-contact.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/homepage' },
   { path: 'homepage', component: HomeComponent },
+  { path: 'signup', component: SignupComponent },
   { path: 'about', component: AboutComponent },
   {
     path: 'contact',
