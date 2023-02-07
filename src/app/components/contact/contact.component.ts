@@ -21,6 +21,9 @@ export class ContactComponent implements OnInit {
       .subscribe((data: any) => {
         console.log(data);
         this.guests = Object.keys(data).map((key) => {
+          console.log(key); //refering to the property for each client data we add
+          //so since we didn't add it/ the random id generated from firebase
+          data[key]['id'] = key; // to add the random id to our key we then return
           return data[key];
         });
         console.log(this.guests);
