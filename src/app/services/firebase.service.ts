@@ -12,4 +12,8 @@ export class FirebaseService {
   getClient(url: string) {
     return this.http.get(url);
   }
+  deleteClient(url: string, id: string) {
+    console.log(`${url}/${id}.json`);
+    return this.http.delete(`${url}/${id}.json`);
+  }
 }

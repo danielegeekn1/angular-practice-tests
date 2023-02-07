@@ -31,4 +31,14 @@ export class HomeComponent implements OnInit {
         console.log(data);
       });
   }
+  onDeleteClient() {
+    this.firebase
+      .deleteClient(
+        'https://angular-course-db71f-default-rtdb.europe-west1.firebasedatabase.app/persons',
+        '-NNfj0nrjjjhXfaIcRnk'
+      )
+      .subscribe((data) => {
+        console.log(data);
+      });
+  }
 }
