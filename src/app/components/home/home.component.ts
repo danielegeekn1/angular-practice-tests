@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
   homeform: FormGroup;
-  constructor() {}
+  constructor(private firebase: FirebaseService) {}
   ngOnInit(): void {
     this.homeform = new FormGroup({
       name: new FormControl(null, Validators.required),
@@ -21,5 +22,13 @@ export class HomeComponent implements OnInit {
   }
   onSubmitR() {
     console.log(this.homeform);
+    this.firebase
+      .insertClient(
+        'https://angular-course-db71f-default-rtdb.europe-west1.firebasedatabase.app/persons.json',
+        { name: this.homeform.value.name, email: this.homeform.value.email }
+      )
+      .subscribe((data) => {
+        console.log(data);
+      });
   }
 }
