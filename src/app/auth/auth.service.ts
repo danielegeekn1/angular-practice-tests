@@ -8,7 +8,7 @@ export class AuthService {
   isLoggedIn = true;
   isAdmin = true;
   url =
-    'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDokrALhHaV0zjuGYPjMjjmYELpOHsGfbI';
+    'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDokrALhHaV0zjuGYPjMjjmYELpOHsGfbI';
   constructor(private http: HttpClient) {}
   isAuthenticated() {
     return this.isLoggedIn;
