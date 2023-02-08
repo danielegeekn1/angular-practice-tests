@@ -1,0 +1,11 @@
+/*form css style */
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.formStyle {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}

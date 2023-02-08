@@ -22,6 +22,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SingleContactComponent } from './components/single-contact/single-contact.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { SigninComponent } from './components/signin/signin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { SignupComponent } from './components/signup/signup.component';
     SingleContactComponent,
     NotFoundComponent,
     SignupComponent,
+    SigninComponent,
   ],
   imports: [
     BrowserModule,
